@@ -72,7 +72,9 @@ public class managerStudent extends student {
             System.out.println("2.hien thi ds sinh vien");
             System.out.println("3.sap xep sinh vien");
             System.out.println("4.tim kiem sinh vien");
-            System.out.print("5.nhap lua chon: ");
+            System.out.println(">>>Khac de thoat!<<<");
+            System.out.print(" moi nhap lua chon: ");
+            
             choce = sc.nextInt();
             switch (choce) {
                 case 1:
@@ -94,6 +96,7 @@ public class managerStudent extends student {
                      ms.search(name);
                      break;
                 default:
+                    System.out.print("Da thoat!\n");
                    return;
             }
         }
