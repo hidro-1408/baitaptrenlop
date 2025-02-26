@@ -72,7 +72,7 @@ public class student implements person{
         System.out.println("Tuoi: "+this. getAge());
         System.out.println("NativePlace: " + this. getNativeplace());
         System.out.println("ID: "  + this. getId());
-        
+        System.out.println("------------------------------------\n");
     }
 
     @Override
