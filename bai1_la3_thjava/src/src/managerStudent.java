@@ -49,6 +49,7 @@ public class managerStudent extends student {
         boolean check = false;
         for (student object : dsstudent) {
             if (object.getName().equalsIgnoreCase(nametimkiem)) {
+                System.out.println("-------------Thong tin sinh vien "+ nametimkiem + "-----------");
                 object.display();
                 check = true;
             } else {
@@ -86,6 +87,12 @@ public class managerStudent extends student {
                 case 3:
                     ms.sortds();
                     break;
+                case 4:
+                    System.out.print("Nhap ten can tim: ");
+                    sc.nextLine();
+                    String name = sc.nextLine();
+                     ms.search(name);
+                     break;
                 default:
                    return;
             }
