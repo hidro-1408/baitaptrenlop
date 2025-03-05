@@ -6,6 +6,7 @@ package cau1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Iterator;
 
 /**
  *
@@ -54,10 +55,19 @@ public class quanLySinhVien {
     }
 
     public void xoaSinhVien(String masv) {
-        for (sinhVien object : dssv) {
+        boolean kiemTra = false;
+       Iterator<sinhVien> iterator = dssv.iterator();
+        while(iterator.hasNext()){
+         sinhVien object = iterator.next();
             if (object.getMassv().equals(masv)) {
-                dssv.remove(object);
+                iterator.remove();
+                kiemTra = true;
+                System.out.println("-------da xoa thanh cong sinh vien co ma:" + masv + "----------------------\n");
+               break;
             }
+        }
+        if (kiemTra==false) {
+            System.out.println("-----------------------xoa that bai------------------\n");
         }
     }
 
@@ -98,6 +108,7 @@ public class quanLySinhVien {
                     qlsv.timKiemSinhVienTheoLop(lop);
                     break;
                 default:
+                    System.out.print("-----------Da thoat!-----------\n");
                     return;
             }
         }
